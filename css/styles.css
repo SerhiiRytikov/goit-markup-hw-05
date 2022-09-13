@@ -79,12 +79,16 @@ p, h1, h2, h3, h4, h5, h6 {
 .site-nav .item +.item {
     margin-left: 50px;
 }
-/* Праильний варіант нижче закоментований */
+/* "Краще запам'ятовується" варіант нижче закоментований */
 /* .site-nav .item:not(:last-child) {
     margin-right: 50px;
 } */
 
 .site-nav .link {
+    position: relative;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -96,6 +100,18 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+
+.site-nav .link.current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
 
 /* Контакти */
 .contacts {
@@ -109,6 +125,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contacts .link {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -133,10 +152,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contacts .link:hover,
-.contacts .link:focus {
-    color: var(--accent-color);
-}
-
+.contacts .link:focus,
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-nav .link.current,
@@ -270,9 +286,9 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 1.71;
 }
 
-/* =============== */
-/* Види діяльності */
-/* =============== */
+/* ================= */
+/* Чим ми займаємося */
+/* ================= */
 
 .activities {
     display: flex;
@@ -281,6 +297,30 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .activities .item {
     display: block;
+}
+
+.thumb {
+    position:relative
+}
+
+.thumb .label {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    padding: 27px 0;
+
+    color: #FFFFFF;
+
+    background: rgba(47, 48, 58, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* ======= */
@@ -337,6 +377,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .team-list .icon-speciality {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     width: 44px;
     height: 44px;
     display: flex;
@@ -382,6 +424,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .customers-list .icon-list {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -441,12 +485,16 @@ address .item:not(:first-child) {
 }
 
 .footer-link .map {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 14px;
     line-height: 1.71;
     color: #FFFFFF;
 }
 
 .footer-link .contacts {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 14px;
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
@@ -476,6 +524,8 @@ address .item:not(:first-child) {
 }
 
 .social-link .icon-list {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     width: 44px;
     height: 44px;
     display: flex;
@@ -512,6 +562,8 @@ address .item:not(:first-child) {
 }
 
 .buttons {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     border: none;
     border-radius: 4px;
@@ -535,6 +587,8 @@ address .item:not(:first-child) {
 
 /* Картки */
 .portfolio-list .nondecor {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
 }
 
