@@ -34,9 +34,11 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Акцент #2196F3*/
 /* вторинний колір фону #F5F4FA*/ 
 
-/* Заголовок сайту */
-/* Логотип */
+/* ===== */
+/* Хедер */
+/* ===== */
 
+/* Логотип */
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -77,7 +79,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .site-nav .item +.item {
     margin-left: 50px;
 }
-
+/* Праильний варіант нижче закоментований */
 /* .site-nav .item:not(:last-child) {
     margin-right: 50px;
 } */
@@ -107,7 +109,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contacts .link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -145,7 +148,9 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--accent-color);
 }
 
+/* ===== */
 /* Герой */
+/* ===== */
 
 .hero {
     padding: 200px 0;
@@ -207,7 +212,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .section.features-padding {
     padding-bottom: 0;
 }
-
 .section-title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -218,13 +222,14 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 1.17;
 }
 
-/* Скритий текст */
+/* =========== */
+/* Особливості */
+/* =========== */
+
 .hidden {
     font-size: 0;
     margin: 0;
 }
-
-/* Особливості */
 
 .features-list {
     display: flex;
@@ -236,17 +241,19 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .icon-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
     background-color: var(--secondary-bg-color);
     margin-bottom: 30px;
+    border-radius: 4px;
 }
 
 .features-list .icon {
-    display: block;
     width: 70px;
-    height: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 25px 0;
+    height: 70px;
 }
 
 .features-list .title {
@@ -262,7 +269,10 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     line-height: 1.71;
 }
-/* < !-- Види діяльності --> */
+
+/* =============== */
+/* Види діяльності */
+/* =============== */
 
 .activities {
     display: flex;
@@ -273,7 +283,9 @@ p, h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
+/* ======= */
 /* Команда */
+/* ======= */
 
 .team {
     background-color: var(--secondary-bg-color)
@@ -320,14 +332,17 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .team-list .content {
     display: flex;
-    justify-content: space-between;
-    padding: 0 32px;
+    justify-content: center;
+    gap: 10px;
 }
 
-.team-list .items {
+.team-list .icon-speciality {
     width: 44px;
     height: 44px;
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .team-list .icon {
@@ -336,18 +351,18 @@ p, h1, h2, h3, h4, h5, h6 {
     fill: #AFB1B8;
 }
 
-.team-list .items:hover .icon,
-.team-list .items:focus .icon {
+.team-list .icon-speciality:hover .icon,
+.team-list .icon-speciality:focus .icon {
     fill: #FFFFFF;
 }
 
-.team-list .items:hover,
-.team-list .items:focus {
+.team-list .icon-speciality:hover,
+.team-list .icon-speciality:focus {
     background-color: var(--accent-color);
-    border-radius: 50%;
 }
-
+/* ================ */
 /* Постійні клієнти */
+/* ================ */
 
 .customers {
     font-weight: 700;
@@ -366,9 +381,12 @@ p, h1, h2, h3, h4, h5, h6 {
     height: 92px;
 }
 
-.customers-list .item {
+.customers-list .icon-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 170px;
-    padding: 16px 32px;
+    height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 }
@@ -379,21 +397,30 @@ p, h1, h2, h3, h4, h5, h6 {
     fill: #AFB1B8;
 }
 
-.customers-list .item:hover .icon,
-.customers-list .item:focus .icon {
+.customers-list .icon-list:hover .icon,
+.customers-list .icon-list:focus .icon {
     fill: var(--accent-color);
 }
 
-.customers-list .item:hover,
-.customers-list .item:focus {
+.customers-list .icon-list:hover,
+.customers-list .icon-list:focus {
     border: 1px solid var(--accent-color);
 }
 
-/* Підвал сайту */
+/* ===== */
+/* Футер */
+/* ===== */
+.footer {
+    padding: 60px 0;
+}
 
 .footer .container {
     display: flex;
-    padding: 60px 0;
+    align-items: baseline;
+}
+
+.footer-address {
+    margin-right: 70px;
 }
 
 .footer .logo {
@@ -407,12 +434,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .address {
     margin-top: 20px;
     font-style: normal;
-    margin-right: 70px;
 }
-
-/* .site-nav .item:not(:last-child) {
-    margin-right: 50px;
-} */
 
 address .item:not(:first-child) {
     margin-top: 9px;
@@ -430,7 +452,7 @@ address .item:not(:first-child) {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Підвал сайту Соціальні мережі */
+/* Футер Соціальні мережі */
 
 .footer .links {
     font-weight: 700;
@@ -444,35 +466,39 @@ address .item:not(:first-child) {
 }
 
 .social-link {
-    width: 206px;
-    padding-top: 12px;
+
 }
 
 .social-link .link {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
 }
 
-.social-link .items {
-    height: 44px;
+.social-link .icon-list {
     width: 44px;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.1);
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
 }
-
-.social-link .items:hover,
-.social-link .items:focus {
-    background-color: var(--accent-color);
-    }
 
 .social-link .icon {
-        width: 20px;
-        height: 20px;
-        fill: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
 }
 
+.social-link .icon-list:hover,
+.social-link .icon-list:focus {
+    background-color: var(--accent-color);
+}
+/* ========= */
 /* Портфоліо */
+/* ========= */
+
 /* Кнопки фільтрації*/
 
 .filter {
@@ -502,14 +528,18 @@ address .item:not(:first-child) {
 
 .buttons:hover,
 .buttons:focus {
-    padding: 6px 22px;
     color: #FFFFFF;
     background-color: #2196F3;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Картки */
+.portfolio-list .nondecor {
+    display: block;
+}
 
-.card:hover {
+.portfolio-list .nondecor:hover,
+.portfolio-list .nondecor:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
